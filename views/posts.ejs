@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<body>
+  
+    <nav>
+        <a href="/">Home </a> |
+        <a href="/posts">Posts page</a> |
+        <a href="/contactus">Contact us</a>
+    </nav>
+
+    <div class="posts list">
+        <h1>Postitused</h1>
+         
+            <% if (posts.length > 0) %>
+            <% posts.forEach(post => { %>
+                <h3 class="title">
+                    <%= post.title %>
+                </h3>
+                <p class="body">
+                    <%= post.sisu %>
+                </p>
+            <% }) %>
+    </div>
+
+    <footer class="footer">
+    <p>© WAD 2021 </p>
+    </footer>
+
+</body>
