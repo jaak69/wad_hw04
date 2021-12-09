@@ -1,0 +1,227 @@
+/*Generic styles*/
+
+html, body {
+    height: 100%;
+}
+body {
+    background-color:#1778bd;
+    margin: 0;
+}
+
+.container {
+    height: auto;
+    min-height: 100%;
+    width:800px;
+    margin:0 auto;
+}
+
+form{
+    display: flex;
+}
+
+form input[type="text"], form input[type="password"], form input[type="submit"]{
+    padding:10px 0 10px 0;
+    width: 90%;
+}
+
+form input[type="text"]:hover, form input[type="password"]:hover{
+    border: 2px solid #1c63a7;
+}
+
+input[type="submit"]{
+    background-color: #1c63a7;
+    color:white;
+}
+
+input::placeholder{
+    padding-left: 5px;
+}
+
+/*Header styles*/
+
+#main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    padding: 5px 0;
+    background-color: white;
+    position: fixed;
+    width: 100%;
+    height: 50px;
+}
+
+#main-header img {
+    height: 50px;;
+}
+
+.search-form{
+    flex-direction: row;
+    width:35%;
+}
+
+.search-form input[type="submit"]{
+    width:100px;
+}
+
+/*Login page and form styles*/
+
+.container.login {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+
+.login-form {
+    display: flex;
+    width:800px;
+    background-color: white;
+    flex-direction: column;
+    align-items: center;
+    padding:40px 0 40px 0;
+    position:relative;
+}
+.login-form img{ 
+    position: absolute;
+    left: 20px;
+    top:20px;
+    width:80px;
+}
+
+.login-form form{
+    flex-direction: column;
+    width: 70%;
+}
+
+.login-form form p{
+   margin-bottom:0;
+   display: flex;
+   justify-content: center;
+}
+
+.login-form form p:last-child{
+    margin-bottom:20px;
+ }
+
+.login-form form input[type="submit"]{
+    text-align: center;
+    width:70%;
+    display: block;
+    margin: 0 auto;
+}
+
+/*postit page styles*/
+
+.container.postit-page{
+    background-color: white;
+    padding-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container.post{
+    background-color:white;
+    width: 70%;
+    display: flex;
+    box-sizing: border-box;
+    border-radius: 10px;
+    min-width: 100px;
+    height: auto;
+    margin: 1% auto;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 3px 8px;
+    }
+
+.container.post:hover{
+    background-color:beige;
+    }
+
+
+.container-post{
+    background-color:white;
+    width: 70%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    border-radius: 10px;
+    min-width: 100px;
+    height: auto;
+    margin: 1% auto;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 3px 8px;
+    }
+
+.container-post:hover{
+    background-color:beige;
+    }
+
+.container-post-head{
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: row;
+    width: 95%;
+    padding: 1em;
+    list-style-type: none;
+    justify-content:space-between;
+    align-items: center;
+}
+
+.container-post-head img{
+    width: 25px;
+}
+
+.container-post-image{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.container-post-image img{
+    width: 100%;
+}
+
+.container-post-comment{
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1em;
+}
+
+.container-post-comment img{
+    width: 5%;
+}
+
+#my_paragraph {
+    font-weight: bold;
+    }
+
+.my_caption {
+    font-weight:normal;
+    font-size: 16px;
+    }
+
+.date{
+    font-weight:normal;
+    font-size: 12px;
+    text-align: right;
+    }
+
+div + p{
+    color: coral;
+  }
+
+.other~p{
+    color: blue;
+}
+
+span {
+    background-color:white;
+}
+
+div > span {
+    background-color:yellow;
+}
