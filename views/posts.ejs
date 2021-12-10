@@ -3,21 +3,18 @@
 
     <%- include('partials/header') %>
 
-    <div class="posts list">
+    <section class="container postit-page">
         <h1>Postitused</h1>
          
             <% if (posts.length > 0) %>
             <% posts.forEach(post => { %>
-                <h3 class="title">
-                    <%= post.title %>
-                </h3>
-                <p class="body">
-                    <%= post.sisu %>
-                </p>
+
+                <%- include('partials/article', {post: post}) %>
+              
             <% }) %>
-    </div>
+            </section>
 
     <%- include('partials/footer') %>
 
-<%# Partial page_end.ejs: contains ending <body> and <html> tags %>
+<%# Partial page_end.ejs: contains ending <body> and <html> tags and front_end javascript %>
 <%- include('partials/page_end') %>
