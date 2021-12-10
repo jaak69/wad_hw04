@@ -142,6 +142,6 @@ app.get('/contactus', (req, res) => {
     res.render('contactus');
 });
 
-app.use((req, res, next) => {
+app.use((req, res) => {
     res.status(404).render('404');
 });
