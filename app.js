@@ -19,7 +19,7 @@ app.get('/', (req, res) => {
 
 app.get('/posts', postController.posts)
 
-app.get('/singleposts/:id', postController.singlepost);
+app.get('/singlepost/:id', postController.singlepost);
 
 app.use((req, res) => {
     res.status(404).render('404');

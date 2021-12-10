@@ -16,10 +16,11 @@ exports.posts = async function(req, res) {
 exports.singlepost = async function(req, res) {
     try {
         const id = req.params.id;
-        console.log("get posts request has arrived");
-        const posts = await pool.query(
+        console.log(id);
+        console.log("get post request has arrived");
+        const singlepost = await pool.query(
         "SELECT * FROM public.postitused where id = $1", [id]);
-        res.render('posts', { posts: posts.rows });
+        res.render('singlepost', { post: singlepost.rows[0] });
         } catch (err) {
         console.error(err.message);
         }

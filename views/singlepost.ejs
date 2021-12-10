@@ -1,0 +1,16 @@
+<%# Partial head.ejs: contains opening <html>, <head> and opening <body> tags %>
+    <%- include('partials/head') %>
+
+    <%- include('partials/header') %>
+
+    <section class="container postit-page">
+        <h1>Postitus - <%= post.caption %></h1>
+
+                <%- include('partials/article', {post: post}) %>
+              
+    </section>
+
+    <%- include('partials/footer') %>
+
+<%# Partial page_end.ejs: contains ending <body> and <html> tags and front_end javascript %>
+<%- include('partials/page_end') %>
