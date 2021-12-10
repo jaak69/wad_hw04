@@ -1,11 +1,7 @@
-<!DOCTYPE html>
-<body>
-  
-    <nav>
-        <a href="/">Home </a> |
-        <a href="/posts">Posts page</a> |
-        <a href="/contactus">Contact us</a>
-    </nav>
+<%# Partial head.ejs: contains opening <html>, <head> and opening <body> tags %>
+    <%- include('partials/head') %>
+
+    <%- include('partials/header') %>
 
     <div class="posts list">
         <h1>Postitused</h1>
@@ -21,8 +17,7 @@
             <% }) %>
     </div>
 
-    <footer class="footer">
-    <p>© WAD 2021 </p>
-    </footer>
+    <%- include('partials/footer') %>
 
-</body>
+<%# Partial page_end.ejs: contains ending <body> and <html> tags %>
+<%- include('partials/page_end') %>
