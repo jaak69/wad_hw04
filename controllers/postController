@@ -66,6 +66,7 @@ exports.addlike = async function(req, res) {
         } catch (err) {
         console.log('see tuleb catch blokist')
         console.error(err.message);
+    }
 };
 
 
