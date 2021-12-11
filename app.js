@@ -31,6 +31,8 @@ app.delete('/posts/:id', postController.postdelete);
 
 app.post('/posts', postController.postcreate);
 
+app.put('/posts/:id', postController.addlike);
+
 app.get('/create', (req, res) => {
     res.render('create');
 });

@@ -189,7 +189,6 @@ input::placeholder{
 }
 
 .container-post-image{
-    width: 30%;
     display: flex;
     flex-direction: column;
     justify-content: center;
