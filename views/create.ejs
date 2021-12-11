@@ -1,0 +1,39 @@
+<%# Partial head.ejs: contains opening <html>, <head> and opening <body> tags %>
+    <%- include('partials/head') %>
+
+    <%- include('partials/header') %>
+
+    <section class="container postit-page create">
+    <h1>Add new post</h1>
+    <form class="create-post" action="/create" method="post">
+
+        <div class="post-data">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="user_name">
+          
+            <label for="mail">E-mail:</label>
+            <input type="email" id="mail" name="user_email">
+
+            <label for="date">Date:</label>
+            <input id="date" name="post_date"></input>
+ 
+            <label for="image">Post image:</label>
+            <input id="image" name="post_image"></input>
+ 
+        </div>
+      
+        <div class="post-data">
+            <label for="caption">Post caption:</label>
+           <textarea id="caption" name="post_caption"></textarea>
+
+           <label for="content">Post content:</label>
+           <textarea id="content" name="post_content"></textarea>
+        </div>   
+     
+       </form>
+    </section>
+
+    <%- include('partials/footer') %>
+   
+<%# Partial page_end.ejs: contains ending <body> and <html> tags %>
+<%- include('partials/page_end') %>
