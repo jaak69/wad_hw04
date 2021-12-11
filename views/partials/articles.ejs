@@ -14,8 +14,8 @@
         </p>
         <div class="link-wrapper">
             <div class="like-image-wrapper">
-                <img src="/images/thumbs-up.jpeg" alt="like">
-                <span><%= post.likes %></span>
+                <img id="like-image" data-like="<%= post.id %>" src="/images/thumbs-up.jpeg" alt="like">
+                <span class="likes"><%= post.likes %></span>
             </div>
             <a href="/singlepost/<%= post.id %>">Read more</a>
         </div>
