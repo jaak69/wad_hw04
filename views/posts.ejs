@@ -16,13 +16,14 @@
 
     <%- include('partials/footer') %>
 <script>
-    const likereq = document.querySelector('#like-image');
-    likereq.addEventListener('click', (e) => {
-    const endpoint = `/posts/${likereq.dataset.like}`;
-    fetch(endpoint, {
-    method: 'PUT',
-    }).then(window.location.href = '/posts')
-    });
+    document.querySelectorAll('.like-image').forEach(item => {
+        item.addEventListener('click', (e) => {
+            const endpoint = `/posts/${item.dataset.like}`;
+                fetch(endpoint, {
+                method: 'PUT',
+            }).then(window.location.href = '/posts')
+        })
+    })
 </script>
 <%# Partial page_end.ejs: contains ending <body> and <html> tags and front_end javascript %>
 <%- include('partials/page_end') %>
