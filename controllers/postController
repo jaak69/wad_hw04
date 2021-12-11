@@ -17,7 +17,7 @@ exports.singlepost = async function(req, res) {
     try {
         const id = req.params.id;
         console.log(id);
-        console.log("get post request has arrived");
+        console.log("get singlepost request has arrived");
         const singlepost = await pool.query(
         "SELECT * FROM public.postitused where id = $1", [id]);
         res.render('singlepost', { post: singlepost.rows[0] });
@@ -28,15 +28,14 @@ exports.singlepost = async function(req, res) {
 
 exports.postdelete = async function(req, res) {
     try {
-        console.log("päringu parameetrid");
+        console.log("delete päringu parameetrid");
         console.log(req.params);
         const { id } = req.params;
         const post = req.body;
-        console.log(post)
         console.log("delete a post request has arrived");
         const deletepost = await pool.query(
         "DELETE FROM public.postitused WHERE id = $1", [id]);
-        res.redirect('posts');
+        res.redirect('/posts');
         } catch (err) {
         console.error(err.message);
         }
