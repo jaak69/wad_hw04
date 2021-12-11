@@ -256,18 +256,23 @@ div > span {
 .create-post{
     width: 80%;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
 .create-post .post-data{
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 47%;
 }
 
 .create-post .post-data input{
     width: 100%;
     padding: 10px 0 10px 0;
     margin-bottom: 15px;
+}
+
+.create-post .post-data input[type="submit"]{
+    flex: 0 0 100%;
 }
 
 .create-post .post-data textarea{
