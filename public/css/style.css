@@ -10,7 +10,7 @@ body {
 
 .container {
     height: auto;
-    min-height: calc(100vh - 150px);
+    min-height: calc(100vh - 190px);
     width:800px;
     margin:0 auto;
 }
@@ -74,6 +74,12 @@ input::placeholder{
     background-color: white;
 }
 
+#nav_footer{
+    flex: 0 0 100%;
+    display: flex;
+    justify-content: center;
+}
+
 #nav a {
     padding: 0 15px;
     font-size: 20px;
@@ -124,6 +130,17 @@ input::placeholder{
     width:70%;
     display: block;
     margin: 0 auto;
+}
+
+/*index page styles*/
+
+.container.index-page{
+    background-color: white;
+    padding-top: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 /*postit page styles*/
@@ -298,4 +315,47 @@ div > span {
     flex-direction:row;
     flex-wrap: wrap;
     justify-content: center;
+}
+
+/*contactus page styles*/
+
+.container.contactus-page{
+    background-color: white;
+    padding-top: 90px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items:center;
+    justify-content: center;
+}
+
+.container.contactus_old{
+    background-color: white;
+    width:800px;
+    flex-grow: 1;
+    text-align: center;
+
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.container.contactus{
+    max-width: 50%;
+    flex-grow: 1;
+    text-align: center;
+    height: 20%;
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+th,
+td {
+  padding: 10px;
+}
+
+.row {
+    width: auto;
 }
