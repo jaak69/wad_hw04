@@ -35,6 +35,8 @@ app.get('/create', (req, res) => {
     res.render('create');
 });
 
+app.put('/posts', postController.postcreate);
+
 app.use((req, res) => {
     res.status(404).render('404');
 });

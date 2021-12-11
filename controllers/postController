@@ -56,6 +56,18 @@ exports.postcreate = async function(req, res) {
         }
 };
 
+exports.addlike = async function(req, res) {
+    try {
+        const post = req.body;
+        console.log(post);
+        const addlike = await pool.query(
+        "UPDATE public.postitused SET likes = likes + 1")
+        res.redirect('/posts');
+        } catch (err) {
+        console.log('see tuleb catch blokist')
+        console.error(err.message);
+};
+
 
 
 
