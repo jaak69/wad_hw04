@@ -11,6 +11,14 @@
     </section>
 
     <%- include('partials/footer') %>
-
+<script>
+    const delreq = document.querySelector('a.delete');
+    delreq.addEventListener('click', (e) => {
+    const endpoint = `/posts/${delreq.dataset.del}`;
+    fetch(endpoint, {
+    method: 'DELETE',
+    }).then(window.location.href = '/posts')
+    });
+</script>
 <%# Partial page_end.ejs: contains ending <body> and <html> tags and front_end javascript %>
 <%- include('partials/page_end') %>

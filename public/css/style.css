@@ -44,11 +44,12 @@ input::placeholder{
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
+    flex-wrap: wrap;
     padding: 5px 0;
     background-color: white;
     position: fixed;
     width: 100%;
-    height: 50px;
+    height: 90px;
 }
 
 #main-header img {
@@ -62,6 +63,20 @@ input::placeholder{
 
 .search-form input[type="submit"]{
     width:100px;
+}
+
+/*Navigation*/
+
+#nav{
+    flex: 0 0 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#nav a {
+    padding: 0 15px;
+    font-size: 20px;
+    font-weight: 700;
 }
 
 /*Login page and form styles*/
@@ -114,7 +129,7 @@ input::placeholder{
 
 .container.postit-page{
     background-color: white;
-    padding-top: 60px;
+    padding-top: 90px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -189,6 +204,15 @@ input::placeholder{
     flex-direction: column;
     justify-content: center;
     padding: 1em;
+}
+
+.container-post-comment .link-wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+
+.container-post-comment .link-wrapper button{
+    margin-left:auto;
 }
 
 .container-post-comment img{

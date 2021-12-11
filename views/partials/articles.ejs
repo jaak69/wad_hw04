@@ -7,10 +7,8 @@
         <img src="/images/rain.png" alt="post no 1">
     </div>
     <div class="container-post-comment">
-        <p class="my_caption"><%= post.caption %></p>
-        <div class="link-wrapper">
-            <img src="/images/thumbs-up.jpeg" alt="like">
-            <button class="delete" data-del="<%= post.id %>">Delete</button>
-        <div class="link-wrapper">
+        <p class="my_caption"><%= post.content %></p>
+        <img src="/images/thumbs-up.jpeg" alt="like">
+        <a href="/singlepost/<%= post.id %>">Read more</a>
     </div>
 </article>

@@ -21,6 +21,8 @@ app.get('/posts', postController.posts)
 
 app.get('/singlepost/:id', postController.singlepost);
 
+app.delete('/posts/:id', postController.postdelete);
+
 app.use((req, res) => {
     res.status(404).render('404');
 });

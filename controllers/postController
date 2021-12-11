@@ -26,6 +26,22 @@ exports.singlepost = async function(req, res) {
         }
 };
 
+exports.postdelete = async function(req, res) {
+    try {
+        console.log("päringu parameetrid");
+        console.log(req.params);
+        const { id } = req.params;
+        const post = req.body;
+        console.log(post)
+        console.log("delete a post request has arrived");
+        const deletepost = await pool.query(
+        "DELETE FROM public.postitused WHERE id = $1", [id]);
+        res.redirect('posts');
+        } catch (err) {
+        console.error(err.message);
+        }
+};
+
 
 
 
