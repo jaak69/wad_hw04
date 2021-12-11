@@ -211,8 +211,9 @@ input::placeholder{
     justify-content: space-between;
 }
 
-.container-post-comment .link-wrapper button{
+.container-post-comment .link-wrapper button, .container-post-comment .link-wrapper a{
     margin-left:auto;
+    width:25%;
 }
 
 .container-post-comment img{
