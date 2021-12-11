@@ -18,6 +18,10 @@ app.get('/', (req, res) => {
     res.render('index');
 });
 
+app.get('/contactus', (req, res) => {
+    res.render('contactus');
+});
+
 app.get('/posts', postController.posts)
 
 app.get('/singlepost/:id', postController.singlepost);
