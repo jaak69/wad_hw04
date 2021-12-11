@@ -53,6 +53,17 @@ exports.postcreate = async function(req, res) {
         }
 };
 
+exports.addlike = async function(req, res) {
+    try {
+        res.render('create')
+        // const deletepost = await pool.query(
+        // "DELETE FROM public.postitused WHERE id = $1", [id]);
+        // res.redirect('/posts');
+        } catch (err) {
+        console.error(err.message);
+        }
+};
+
 
 
 

@@ -30,6 +30,8 @@ app.delete('/posts/:id', postController.postdelete);
 
 app.get('/create', postController.postcreate);
 
+app.put('/posts', postController.postcreate);
+
 app.use((req, res) => {
     res.status(404).render('404');
 });
