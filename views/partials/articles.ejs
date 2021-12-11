@@ -1,14 +1,23 @@
 <article class="container-post">
-    <div class="container-post-head"> 
+    <div class="container-post-head">
         <img src="/images/user-circle.svg" alt="user icon">
-        <p class="date"><%= post.date %></p>
+        <p class="date">
+            <%= post.date %>
+        </p>
     </div>
     <div class="container-post-image">
         <img src="/images/rain.png" alt="post no 1">
     </div>
     <div class="container-post-comment">
-        <p class="my_caption"><%= post.content %></p>
-        <img src="/images/thumbs-up.jpeg" alt="like">
-        <a href="/singlepost/<%= post.id %>">Read more</a>
+        <p class="my_caption">
+            <%= post.caption %>
+        </p>
+        <div class="link-wrapper">
+            <div class="like-image-wrapper">
+                <img src="/images/thumbs-up.jpeg" alt="like">
+                <span><%= post.likes %></span>
+            </div>
+            <a href="/singlepost/<%= post.id %>">Read more</a>
+        </div>
     </div>
 </article>
