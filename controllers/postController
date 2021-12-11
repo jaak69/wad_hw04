@@ -47,10 +47,11 @@ exports.postcreate = async function(req, res) {
         const post = req.body;
         console.log(post);
         const deletepost = await pool.query(
-        "INSERT INTO public.postitused(userId, name, e_mail, caption, date, post_image, post_content) VALUES (3, $1, $2, $3, $4, $5, $6) RETURNING*", [post.user_name, post.user_email, post.post_caption, post.post_date, post.post_image, post.post_content]);
+        "INSERT INTO public.postitused(name, e_mail, caption, date, post_image, post_content) VALUES ($1, $2, $3, $4, $5, $6) RETURNING *", [post.user_name, post.user_email, post.post_caption, post.post_date, post.post_image, post.post_content]);
         res.redirect('/posts');
         } catch (err) {
         console.log('see tuleb catch blokist')
+
         console.error(err.message);
         }
 };
