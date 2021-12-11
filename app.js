@@ -9,6 +9,7 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 //
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 //app.use(cors());
 app.use(express.static('public'));
 app.listen(3001);
@@ -28,7 +29,11 @@ app.get('/singlepost/:id', postController.singlepost);
 
 app.delete('/posts/:id', postController.postdelete);
 
-app.get('/create', postController.postcreate);
+app.post('/posts', postController.postcreate);
+
+app.get('/create', (req, res) => {
+    res.render('create');
+});
 
 app.put('/posts', postController.postcreate);
 
