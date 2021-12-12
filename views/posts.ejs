@@ -21,7 +21,12 @@
             const endpoint = `/posts/${item.dataset.like}`;
                 fetch(endpoint, {
                 method: 'PUT',
-            }).then(window.location.href = '/posts')
+            }).then(response => {
+                item.nextElementSibling.textContent = parseInt(item.nextElementSibling.textContent) + 1
+                item.style.opacity = "0.5"
+            })
+        },{
+            once: true
         })
     })
 </script>

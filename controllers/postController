@@ -62,7 +62,6 @@ exports.addlike = async function(req, res) {
         console.log(id)
         const addlike = await pool.query(
         "UPDATE public.postitused SET likes = likes + 1 where id = $1", [id])
-        res.redirect('/posts');
         } catch (err) {
         console.log('see tuleb catch blokist')
         console.error(err.message);
