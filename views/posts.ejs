@@ -22,6 +22,7 @@
                 fetch(endpoint, {
                 method: 'PUT',
             }).then(response => {
+                console.log(item.nextElementSibling)
                 item.nextElementSibling.textContent = parseInt(item.nextElementSibling.textContent) + 1
                 item.style.opacity = "0.5"
             })
