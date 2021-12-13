@@ -315,6 +315,8 @@ div > span {
     flex-direction:row;
     flex-wrap: wrap;
     justify-content: center;
+    background-color: white;
+    padding: 0 0 20px 0;
 }
 
 /*contactus page styles*/

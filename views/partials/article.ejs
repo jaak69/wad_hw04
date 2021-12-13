@@ -1,13 +1,14 @@
 <article class="container-post">
     <div class="container-post-head"> 
         <img src="/images/user-circle.svg" alt="user icon">
+        <p class="user_info"><%= post.name %></p>
         <p class="date"><%= post.date %></p>
     </div>
     <div class="container-singlepost-image">
         <img src="/images/rain.png" alt="post no 1">
     </div>
     <div class="container-post-comment">
-        <p class="my_caption"><%= post.caption %></p>
+        <p class="my_caption"><%= post.post_content %></p>
         <div class="link-wrapper">
             <img src="/images/thumbs-up.jpeg" alt="like">
             <button class="delete" data-del="<%= post.id %>">Delete</button>
